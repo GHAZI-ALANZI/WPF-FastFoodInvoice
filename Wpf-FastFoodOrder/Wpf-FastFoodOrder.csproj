@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" />
+  </ItemGroup>
+
 </Project>
