@@ -5,53 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_FastFoodOrder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="None">
+        Title="MainWindow" Height="700" Width="950" WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="179*"/>
             <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Margin="0,0,0,349" Background="#FFDD2626" Grid.ColumnSpan="2"/>
-        <StackPanel HorizontalAlignment="Left" Width="171" Background="Black">
-            <CheckBox Content="CheckBox" Background="White" Width="16" Margin="-45,101,82,0" Height="14"/>
-            <CheckBox Content="CheckBox" Background="White" Width="16" Height="14" Margin="-125,37,0,0"/>
-            <CheckBox Content="CheckBox" Background="White" Width="16" Height="14" Margin="-125,37,0,0"/>
-            <CheckBox Content="CheckBox" Background="White" Width="16" Height="14" Margin="-125,37,0,0"/>
-            <CheckBox Content="CheckBox" Background="White" Width="16" Height="14" Margin="-125,37,0,0"/>
-            <Image Height="50" Width="50" Margin="0,-415,0,0" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill"/>
-            <CheckBox Content="CheckBox" Background="White" Width="16" Height="14" Margin="-125,37,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-415,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-315,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-215,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-115,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-30,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="100,-560,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="100,-460,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="100,-360,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="100,-260,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="100,-160,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="100,-60,0,0"/>
+        <StackPanel Margin="0,0,0,535" Background="Black" Grid.ColumnSpan="2">
+            <Label x:Name="time" Content="" Width="164" Margin="-11,101,-259,0" Foreground="White" FontWeight="Bold" FontSize="22"/>
+            <Label Content="Gh Resturant" Width="272" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-170,0,0"/>
+            <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Margin="0,-139,0,0" Panel.ZIndex="-6" Opacity="0.5"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Width="171" Margin="629,0,0,0" Background="Black" Grid.ColumnSpan="2">
-            <CheckBox Content="CheckBox" Width="16" Height="16" Margin="45,101,-82,0"/>
-            <CheckBox Content="CheckBox" Width="16" Height="16" Margin="125,37,0,0"/>
-            <CheckBox Content="CheckBox" Width="16" Height="16" Margin="125,37,0,0"/>
-            <CheckBox Content="CheckBox" Width="16" Height="16" Margin="125,37,0,0"/>
-            <CheckBox Content="CheckBox" Width="16" Height="16" Margin="125,37,0,0"/>
-            <CheckBox Content="CheckBox" Width="16" Height="16" Margin="125,37,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-550,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-440,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-340,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-240,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-140,0,0"/>
-            <Image Height="50" Width="50" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill" Margin="0,-40,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="-100,-560,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="-100,-460,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="-100,-360,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="-100,-260,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="-100,-160,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="39" Height="15" Margin="-100,-60,0,0"/>
+        <StackPanel HorizontalAlignment="Left" Width="280" Background="Black">
+            <Image Height="135" Width="135" Margin="0,110,15,-13" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill"/>
+            <Image Height="135" Width="135" Source="/burger.png" Stretch="Fill" Margin="0,20,15,0"/>
+            <TextBox TextWrapping="Wrap" Width="59" Height="30" Margin="185,-880,0,0"/>
+            <Image Height="135" Width="135" Source="/Nugget.png" Stretch="Fill" Margin="0,0,15,0"/>
+            <Image Height="135" Width="135" Source="/Pizza.png" Stretch="Fill" Margin="0,0,15,0"/>
+            <CheckBox Content="CheckBox" Margin="-180,-955,0,0" Width="15" Height="15"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-685,0,0"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-395,0,0"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-135,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-955,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-685,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-395,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-135,0,0"/>
+            <Label Content="Food" Width="152" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-1200,0,0"/>
+            <Image Height="723" Width="280" Source="/fire-4262753_1280.jpg" Stretch="Fill" Panel.ZIndex="-7" Opacity="0.3" Margin="0,-655,0,0"/>
         </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Width="280" Background="Black" Grid.ColumnSpan="2" Margin="672,0,0,0">
+            <Image Height="135" Width="135" Margin="0,110,-15,-13" Source="/cola.png" Stretch="Fill"/>
+            <Image Height="135" Width="135" Source="/fanta.png" Stretch="Fill" Margin="0,20,-15,0"/>
+            <TextBox TextWrapping="Wrap" Width="59" Height="30" Margin="185,-880,0,0"/>
+            <Image Height="135" Width="135" Source="/7up.png" Stretch="Fill" Margin="0,0,-15,0"/>
+            <Image Height="135" Width="135" Source="/smoothies.png" Stretch="Fill" Margin="0,0,-15,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-955,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-685,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-395,0,0"/>
+            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-135,0,0"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-955,0,0"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-685,0,0"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-395,0,0"/>
+            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-135,0,0"/>
+            <Label Content="Soft Drink" Width="217" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-1200,0,0"/>
+            <Image Height="723" Width="280" Source="/ice.jpg" Stretch="Fill" Margin="0,-655,0,0" Panel.ZIndex="-7" Opacity="0.4"/>
+        </StackPanel>
+        <StackPanel Margin="0,552,10,0" Background="Black" Grid.ColumnSpan="2" Panel.ZIndex="-10">
+            <Button x:Name="add" Content="Add" Margin="-280,59,0,0" Width="80" Height="35" Background="#FF0BBBA8" Foreground="White" FontSize="22" FontWeight="Bold"/>
+            <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#FFB41307" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="290,-35,0,0" Background="#FFCBF100" FontSize="22" FontWeight="Bold" Foreground="#FF483C02"/>
+            <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Panel.ZIndex="-6" Opacity="0.5" Margin="0,-100,0,0"/>
+        </StackPanel>
+        <RichTextBox x:Name="bill" Margin="280,152,166,135" RenderTransformOrigin="0.493,0.473" Background="#FFC26445"  FontSize="48" FontWeight="Bold" BorderThickness="0,0,0,0">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Rich"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
     </Grid>
 </Window>

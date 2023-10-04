@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Wpf_FastFoodOrder
 {
@@ -23,6 +24,16 @@ namespace Wpf_FastFoodOrder
         public MainWindow()
         {
             InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+           
+        }
+
+        private void timer_Tick(object? sender, EventArgs e)
+        {
+            time.Content = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

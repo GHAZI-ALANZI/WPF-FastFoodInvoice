@@ -9,11 +9,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="7up.png" />
+    <None Remove="bg.jpg" />
+    <None Remove="burger.png" />
+    <None Remove="cola.png" />
+    <None Remove="fanta.png" />
+    <None Remove="fire-4262753_1280.jpg" />
+    <None Remove="ice.jpg" />
     <None Remove="kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" />
+    <None Remove="Nugget.png" />
+    <None Remove="Pizza.png" />
+    <None Remove="smoothies.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="7up.png" />
+    <Resource Include="bg.jpg" />
+    <Resource Include="burger.png" />
+    <Resource Include="cola.png" />
+    <Resource Include="fanta.png" />
+    <Resource Include="fire-4262753_1280.jpg" />
+    <Resource Include="ice.jpg" />
     <Resource Include="kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" />
+    <Resource Include="Nugget.png" />
+    <Resource Include="Pizza.png" />
+    <Resource Include="smoothies.png" />
   </ItemGroup>
 
 </Project>
