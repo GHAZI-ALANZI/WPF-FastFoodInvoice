@@ -51,15 +51,15 @@
             <Image x:Name="colacb" Height="723" Width="280" Source="/ice.jpg" Stretch="Fill" Margin="0,-655,0,0" Panel.ZIndex="-7" Opacity="0.4"/>
         </StackPanel>
         <StackPanel Margin="0,552,10,0" Background="Black" Grid.ColumnSpan="2" Panel.ZIndex="-10">
-            <Button x:Name="add" Content="Add" Margin="-280,59,0,0" Width="80" Height="35" Background="#590BBBA8" Foreground="White" FontSize="22" FontWeight="Bold" Cursor="Hand"/>
-            <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#59B41307" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand"/>
-            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="290,-35,0,0" Background="#57CBF100" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand"/>
+            <Button x:Name="add" Content="Add" Margin="-280,59,0,0" Width="80" Height="35" Background="#590BBBA8" Foreground="White" FontSize="22" FontWeight="Bold" Cursor="Hand" Click="add_Click"/>
+            <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#59B41307" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="reset_Click"/>
+            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="290,-35,0,0" Background="#57CBF100" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="print_Click_1"/>
             <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Panel.ZIndex="-6" Opacity="0.5" Margin="0,-100,0,0"/>
         </StackPanel>
-        <RichTextBox x:Name="bill" Margin="280,152,166,135" RenderTransformOrigin="0.493,0.473" Background="#FFC26445"  FontSize="48" FontWeight="Bold" BorderThickness="0,0,0,0">
+        <RichTextBox x:Name="bill" Margin="280,152,166,135" RenderTransformOrigin="0.493,0.473" Background="White"  FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,0">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="Rich"/>
+                    <Run />
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
