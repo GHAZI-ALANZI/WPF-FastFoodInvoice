@@ -22,16 +22,16 @@
             <TextBox TextWrapping="Wrap" Width="59" Height="30" Margin="185,-880,0,0"/>
             <Image Height="135" Width="135" Source="/Nugget.png" Stretch="Fill" Margin="0,0,15,0"/>
             <Image Height="135" Width="135" Source="/Pizza.png" Stretch="Fill" Margin="0,0,15,0"/>
-            <CheckBox Content="CheckBox" Margin="-180,-955,0,0" Width="15" Height="15"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-685,0,0"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-395,0,0"/>
+            <CheckBox x:Name="friescb" Content="CheckBox" Margin="-180,-955,0,0" Width="15" Height="15"/>
+            <CheckBox x:Name="burgercb" Content="CheckBox" Width="15" Height="15" Margin="-180,-685,0,0"/>
+            <CheckBox x:Name="nuggetcb" Content="CheckBox" Width="15" Height="15" Margin="-180,-395,0,0"/>
             <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-135,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-955,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-685,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-395,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="180,-135,0,0"/>
+            <TextBox x:Name="friestb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-955,0,0"/>
+            <TextBox x:Name="burgertb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-685,0,0"/>
+            <TextBox x:Name="nuggettb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-395,0,0"/>
+            <TextBox x:Name="pizzatb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-135,0,0"/>
             <Label Content="Food" Width="152" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-1200,0,0"/>
-            <Image Height="723" Width="280" Source="/fire-4262753_1280.jpg" Stretch="Fill" Panel.ZIndex="-7" Opacity="0.3" Margin="0,-655,0,0"/>
+            <Image x:Name="pizzacb" Height="723" Width="280" Source="/fire-4262753_1280.jpg" Stretch="Fill" Panel.ZIndex="-7" Opacity="0.3" Margin="0,-655,0,0"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Width="280" Background="Black" Grid.ColumnSpan="2" Margin="672,0,0,0">
             <Image Height="135" Width="135" Margin="0,110,-15,-13" Source="/cola.png" Stretch="Fill"/>
@@ -39,21 +39,21 @@
             <TextBox TextWrapping="Wrap" Width="59" Height="30" Margin="185,-880,0,0"/>
             <Image Height="135" Width="135" Source="/7up.png" Stretch="Fill" Margin="0,0,-15,0"/>
             <Image Height="135" Width="135" Source="/smoothies.png" Stretch="Fill" Margin="0,0,-15,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-955,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-685,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-395,0,0"/>
-            <TextBox TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-135,0,0"/>
+            <TextBox x:Name="colatb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-955,0,0"/>
+            <TextBox x:Name="fantatb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-685,0,0"/>
+            <TextBox x:Name="_7uptb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-395,0,0"/>
+            <TextBox x:Name="coctiltb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-135,0,0"/>
             <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-955,0,0"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-685,0,0"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-395,0,0"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-135,0,0"/>
+            <CheckBox x:Name="fantacb" Content="CheckBox" Width="15" Height="15" Margin="180,-685,0,0"/>
+            <CheckBox x:Name="_7upcb" Content="CheckBox" Width="15" Height="15" Margin="180,-395,0,0"/>
+            <CheckBox x:Name="coctilcb" Content="CheckBox" Width="15" Height="15" Margin="180,-135,0,0"/>
             <Label Content="Soft Drink" Width="217" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-1200,0,0"/>
-            <Image Height="723" Width="280" Source="/ice.jpg" Stretch="Fill" Margin="0,-655,0,0" Panel.ZIndex="-7" Opacity="0.4"/>
+            <Image x:Name="colacb" Height="723" Width="280" Source="/ice.jpg" Stretch="Fill" Margin="0,-655,0,0" Panel.ZIndex="-7" Opacity="0.4"/>
         </StackPanel>
         <StackPanel Margin="0,552,10,0" Background="Black" Grid.ColumnSpan="2" Panel.ZIndex="-10">
-            <Button x:Name="add" Content="Add" Margin="-280,59,0,0" Width="80" Height="35" Background="#FF0BBBA8" Foreground="White" FontSize="22" FontWeight="Bold"/>
-            <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#FFB41307" FontSize="22" FontWeight="Bold" Foreground="White"/>
-            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="290,-35,0,0" Background="#FFCBF100" FontSize="22" FontWeight="Bold" Foreground="#FF483C02"/>
+            <Button x:Name="add" Content="Add" Margin="-280,59,0,0" Width="80" Height="35" Background="#590BBBA8" Foreground="White" FontSize="22" FontWeight="Bold" Cursor="Hand"/>
+            <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#59B41307" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand"/>
+            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="290,-35,0,0" Background="#57CBF100" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand"/>
             <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Panel.ZIndex="-6" Opacity="0.5" Margin="0,-100,0,0"/>
         </StackPanel>
         <RichTextBox x:Name="bill" Margin="280,152,166,135" RenderTransformOrigin="0.493,0.473" Background="#FFC26445"  FontSize="48" FontWeight="Bold" BorderThickness="0,0,0,0">

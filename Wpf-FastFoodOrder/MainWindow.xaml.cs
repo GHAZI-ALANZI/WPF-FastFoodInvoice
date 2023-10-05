@@ -35,5 +35,10 @@ namespace Wpf_FastFoodOrder
         {
             time.Content = DateTime.Now.ToString("HH:mm:ss");
         }
+
+        private void print_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
