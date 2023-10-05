@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_FastFoodOrder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="950" WindowStyle="None">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="700" Width="950" WindowStyle="None" Background="#FFCECACA">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="179*"/>
             <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Margin="0,0,0,535" Background="Black" Grid.ColumnSpan="2">
-            <Label x:Name="time" Content="" Width="164" Margin="-11,101,-259,0" Foreground="White" FontWeight="Bold" FontSize="22"/>
+            <Label x:Name="time" Content="" Width="261" Margin="-244,101,-259,0" Foreground="White" FontWeight="Bold" FontSize="22"/>
             <Label Content="Gh Resturant" Width="272" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-170,0,0"/>
             <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Margin="0,-139,0,0" Panel.ZIndex="-6" Opacity="0.5"/>
         </StackPanel>
@@ -71,12 +73,12 @@
             <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#59B41307" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="reset_Click"/>
             <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="313,-35,0,0" Background="#57CBF100" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="print_Click_1"/>
             <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Panel.ZIndex="-6" Opacity="0.5" Margin="0,-100,0,0"/>
-            <TextBox x:Name="totalitems" TextWrapping="Wrap" Width="70" Margin="-129,-237,0,0" Height="20"/>
-            <TextBox x:Name="totalitemstax" TextWrapping="Wrap" Width="70" Height="20" Margin="167,-236,0,0"/>
+            <TextBox x:Name="totalitems" TextWrapping="Wrap" Width="70" Margin="-129,-237,0,0" Height="20" FontWeight="Bold"/>
+            <TextBox x:Name="totalitemstax" TextWrapping="Wrap" Width="70" Height="20" Margin="167,-236,0,0" FontWeight="Bold"/>
             <Label Content="Total:" Margin="-270,-237,0,0" Width="47" Height="30" Foreground="#FFFDFDFD" FontSize="14" FontWeight="Bold"/>
             <Label Content="Total/tax:" Width="74" Height="30" Foreground="#FFFDFDFD" FontSize="14" FontWeight="Bold" Margin="23,-237,0,0"/>
         </StackPanel>
-        <RichTextBox x:Name="bill" Margin="280,152,178,135" RenderTransformOrigin="0.493,0.473" Background="White"  FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,0">
+        <RichTextBox x:Name="bill" Margin="280,152,178,135" RenderTransformOrigin="0.493,0.473" Background="#FFCECACA"  FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,0">
             <FlowDocument>
                 <Paragraph>
                     <Run />

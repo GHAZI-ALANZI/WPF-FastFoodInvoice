@@ -36,7 +36,7 @@ namespace Wpf_FastFoodOrder
 
         private void timer_Tick(object? sender, EventArgs e)
         {
-            time.Content = DateTime.Now.ToString("HH:mm:ss");
+            time.Content = DateTime.Now.ToString("dd'-'MM'-'yy'  'HH:mm:ss");
         }
 
         //######## ADD TO  BILL##################################//
@@ -46,56 +46,104 @@ namespace Wpf_FastFoodOrder
         private void add_Click(object sender, RoutedEventArgs e)
         {
             bill.Document.Blocks.Clear();
-            bill.AppendText("\n *******Your Order******\n Date  " + DateTime.Now.ToString("dd'-'MM'-'yy' 'HH':'mm':'ss") );
+            bill.AppendText("GH RESTURANT  VIENNA 1100\n *****Your Order****\n InvoicNr##" + DateTime.Now.ToString("dd''MM''yy''HH''mm''ss##") +"\n Date " + DateTime.Now.ToString("dd'-'MM'-'yy' 'HH':'mm':'ss")+"\n####################" );
 
 
             double sum=0;
-            
-           
+            double sumtax=0;
+
+
             if (friescb.IsChecked==true && friestb.Text !="0" ) {
 
 
                 var total = Convert.ToDouble(friestb.Text) * 12;
                 sum=total;
+                sumtax = total + (total * 0.2);
 
                 bill.AppendText( $"\n{friestb.Text}x Friet :{ total}€\n****************");
 
-                totalitems.Text=sum.ToString();
+                totalitems.Text=sum.ToString()+ "€";
+                totalitemstax.Text=sumtax.ToString() + "€";
 
             }
             if (burgercb.IsChecked == true && burgertb.Text != "0")
             {
                 var total1 = Convert.ToDouble(burgertb.Text) * 50;
                 sum += total1;
-
+                sumtax += total1 + (total1 * 0.2);
+               
 
                 bill.AppendText( $"\n{burgertb.Text}x Burger :{total1}€\n****************");
-                totalitems.Text = sum.ToString();
-
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
             }
             if (nuggetcb.IsChecked == true && nuggettb.Text != "0")
             {
-                var total3 = Convert.ToDouble(nuggettb.Text) * 50;
-                sum += total3;
+                var total2 = Convert.ToDouble(nuggettb.Text) * 50;
+                sum += total2;
+                sumtax += total2 + (total2 * 0.2);
 
-
-                bill.AppendText($"\n {nuggettb.Text}x Nuggets :{total3}€\n****************");
-                totalitems.Text = sum.ToString();
-
+                bill.AppendText($"\n {nuggettb.Text}x Nuggets :{total2}€\n****************");
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
             }
             if (pizzacb.IsChecked == true && pizzatb.Text != "0")
             {
-                var total4 = Convert.ToDouble(pizzatb.Text) * 50;
-                sum += total4;
+                var total3 = Convert.ToDouble(pizzatb.Text) * 20;
+                sum += total3;
+                sumtax += total3 + (total3 * 0.2);
 
-
-                bill.AppendText($"\n {burgertb.Text}x Pitzza:{total4}€\n****************");
-                totalitems.Text = sum.ToString();
-
+                bill.AppendText($"\n {burgertb.Text}x Pitzza:{total3}€\n****************");
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
             }
 
-            bill.AppendText($"\n Total:{sum}€");
+            if (colacb.IsChecked == true && colatb.Text != "0")
+            {
+                var total4 = Convert.ToDouble(colatb.Text) * 2;
+                sum += total4;
+                sumtax += total4 + (total4 * 0.2);
 
+                bill.AppendText($"\n {colatb.Text}x Cola:{total4}€\n****************");
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
+            }
+
+            if (fantacb.IsChecked == true && fantatb.Text != "0")
+            {
+                var total5 = Convert.ToDouble(fantatb.Text) * 2;
+                sum += total5;
+                sumtax += total5 + (total5 * 0.2);
+
+                bill.AppendText($"\n {fantatb.Text}x Fanta:{total5}€\n****************");
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
+            }
+            if (_7upcb.IsChecked == true && _7uptb.Text != "0")
+            {
+                var total6 = Convert.ToDouble(_7uptb.Text) * 2;
+                sum += total6;
+                sumtax += total6 + (total6 * 0.2);
+
+                bill.AppendText($"\n {_7uptb.Text}x 7up:{total6}€\n****************");
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
+            }
+
+            if (coctilcb.IsChecked == true && coctiltb.Text != "0")
+            {
+                var total7 = Convert.ToDouble(coctiltb.Text) * 7;
+                sum += total7;
+                sumtax += total7 + (total7 * 0.2);
+
+                bill.AppendText($"\n {coctiltb.Text}x Coctil:{total7}€\n****************");
+                totalitems.Text = sum.ToString() + "€";
+                totalitemstax.Text = sumtax.ToString() + "€";
+            }
+
+
+            bill.AppendText($"\n Total:{sum}€");
+            bill.AppendText($"\n TotalwithTax:{sumtax}€");
 
 
 
@@ -434,16 +482,7 @@ namespace Wpf_FastFoodOrder
 
             }
         }
-
-
-
-
-
-
-
-
-
-        //########END DECCREASE BUTTON ##################################//
+        //########END DECCREASE BUTTON ##################################//*****************
     }
 
 
