@@ -22,14 +22,16 @@ namespace Wpf_FastFoodOrder
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+           
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
-           
+
         }
 
         private void timer_Tick(object? sender, EventArgs e)
@@ -37,20 +39,100 @@ namespace Wpf_FastFoodOrder
             time.Content = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void print_Click(object sender, RoutedEventArgs e)
-        {
+        //######## ADD TO  BILL##################################//
 
-        }
+
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            bill.AppendText("\n ##Your Order## Date"+DateTime.Now+"##############\t\n hgjhruzurz");
+            bill.Document.Blocks.Clear();
+            bill.AppendText("\n *******Your Order******\n Date  " + DateTime.Now.ToString("dd'-'MM'-'yy' 'HH':'mm':'ss") );
+
+
+            double sum=0;
+            
+           
+            if (friescb.IsChecked==true && friestb.Text !="0" ) {
+
+
+                var total = Convert.ToDouble(friestb.Text) * 12;
+                sum=total;
+
+                bill.AppendText( $"\n{friestb.Text}x Friet :{ total}€\n****************");
+
+                totalitems.Text=sum.ToString();
+
+            }
+            if (burgercb.IsChecked == true && burgertb.Text != "0")
+            {
+                var total1 = Convert.ToDouble(burgertb.Text) * 50;
+                sum += total1;
+
+
+                bill.AppendText( $"\n{burgertb.Text}x Burger :{total1}€\n****************");
+                totalitems.Text = sum.ToString();
+
+            }
+            if (nuggetcb.IsChecked == true && nuggettb.Text != "0")
+            {
+                var total3 = Convert.ToDouble(nuggettb.Text) * 50;
+                sum += total3;
+
+
+                bill.AppendText($"\n {nuggettb.Text}x Nuggets :{total3}€\n****************");
+                totalitems.Text = sum.ToString();
+
+            }
+            if (pizzacb.IsChecked == true && pizzatb.Text != "0")
+            {
+                var total4 = Convert.ToDouble(pizzatb.Text) * 50;
+                sum += total4;
+
+
+                bill.AppendText($"\n {burgertb.Text}x Pitzza:{total4}€\n****************");
+                totalitems.Text = sum.ToString();
+
+            }
+
+            bill.AppendText($"\n Total:{sum}€");
+
+
+
+
+
         }
+
+        //########END ADD TO  BILL##################################//
+
+
+
+
+        //######## REST BILL##################################//
+
 
         private void reset_Click(object sender, RoutedEventArgs e)
         {
+            //unchecked and return value to 0
+
+            friescb.IsChecked= false;friestb.Text ="0";
+            burgercb.IsChecked= false; burgertb.Text = "0";
+            nuggetcb.IsChecked= false; nuggettb.Text = "0";
+            pizzacb.IsChecked= false; pizzatb.Text = "0";
+            colacb.IsChecked= false; colatb.Text = "0";
+            fantacb.IsChecked= false; fantatb.Text = "0";
+            _7upcb.IsChecked= false; _7uptb.Text = "0";
+            coctilcb.IsChecked= false; coctiltb.Text = "0";
+
+            //clear contect of reciept
+
             bill.Document.Blocks.Clear();
         }
+        //######## END REST BILL##################################//*********************************
+
+
+
+
+        //########PRINT BILL##################################//
 
         private void print_Click_1(object sender, RoutedEventArgs e)
         {
@@ -101,5 +183,268 @@ namespace Wpf_FastFoodOrder
 
                 return clone;
             }
+
+
+
+        //######## END  PRINT BILL##################################//***********************************
+
+
+
+
+
+        //######## INCREASE BUTTON ##################################//
+        private void frietplus_Click(object sender, RoutedEventArgs e)
+        {     // Get the current value from the TextBox
+            if (int.TryParse(friestb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                friestb.Text = newValue.ToString();
+
+             
+            }
+         }
+
+        private void burgerplus_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(burgertb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                burgertb.Text = newValue.ToString();
+
+
+            }
         }
+
+        private void nuggetplus_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(nuggettb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                nuggettb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void pitzzaplus_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(pizzatb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                pizzatb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void colaplus_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(colatb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                colatb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void fantaplus_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            if (int.TryParse(fantatb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                fantatb.Text = newValue.ToString();
+
+
+            }
+
+        }
+
+        private void upplus_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (int.TryParse(_7uptb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                _7uptb.Text = newValue.ToString();
+
+
+            }
+
+
+        }
+        private void coctilplus_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            if (int.TryParse(coctiltb.Text, out int currentValue))
+            {
+                // Increment the value
+                int newValue = currentValue + 1;
+
+                // Update the TextBox with the new value
+                coctiltb.Text = newValue.ToString();
+
+
+            }
+
+
+
+        }
+
+        //########END INCREASE BUTTON ##################################//********************
+
+
+
+
+        //######## DECCREASE BUTTON ##################################//
+
+        private void frietmin_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (int.TryParse(friestb.Text, out int currentValue) && friestb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                friestb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void burgermin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(burgertb.Text, out int currentValue)&& burgertb.Text!="0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                burgertb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void nuggetmin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(nuggettb.Text, out int currentValue) && nuggettb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                nuggettb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void pitzzamin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(pizzatb.Text, out int currentValue) && pizzatb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                pizzatb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void colamin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(colatb.Text, out int currentValue) && colatb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                colatb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void fantamin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(fantatb.Text, out int currentValue) && fantatb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                fantatb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void upmin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(_7uptb.Text, out int currentValue) && _7uptb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                _7uptb.Text = newValue.ToString();
+
+
+            }
+        }
+
+        private void coctilmin_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(coctiltb.Text, out int currentValue) && coctiltb.Text != "0")
+            {
+                // deccrement the value
+                int newValue = currentValue - 1;
+
+                // Update the TextBox with the new value
+                coctiltb.Text = newValue.ToString();
+
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+        //########END DECCREASE BUTTON ##################################//
     }
+
+
+}

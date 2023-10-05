@@ -17,21 +17,29 @@
             <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Margin="0,-139,0,0" Panel.ZIndex="-6" Opacity="0.5"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Width="280" Background="Black">
-            <Image Height="135" Width="135" Margin="0,110,15,-13" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill"/>
-            <Image Height="135" Width="135" Source="/burger.png" Stretch="Fill" Margin="0,20,15,0"/>
+            <Image Height="135" Width="135" Margin="-20,110,15,-13" Source="/kisspng-mcdonald-s-french-fries-street-food-catering-ketch-fried-chicken-5ab4d461326bf3.7876386715218002892065.png" Stretch="Fill"/>
+            <Image Height="135" Width="135" Source="/burger.png" Stretch="Fill" Margin="-20,20,15,0"/>
             <TextBox TextWrapping="Wrap" Width="59" Height="30" Margin="185,-880,0,0"/>
-            <Image Height="135" Width="135" Source="/Nugget.png" Stretch="Fill" Margin="0,0,15,0"/>
-            <Image Height="135" Width="135" Source="/Pizza.png" Stretch="Fill" Margin="0,0,15,0"/>
+            <Image Height="135" Width="135" Source="/Nugget.png" Stretch="Fill" Margin="-20,0,15,0"/>
+            <Image Height="135" Width="135" Source="/Pizza.png" Stretch="Fill" Margin="-20,0,15,0"/>
             <CheckBox x:Name="friescb" Content="CheckBox" Margin="-180,-955,0,0" Width="15" Height="15"/>
             <CheckBox x:Name="burgercb" Content="CheckBox" Width="15" Height="15" Margin="-180,-685,0,0"/>
             <CheckBox x:Name="nuggetcb" Content="CheckBox" Width="15" Height="15" Margin="-180,-395,0,0"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="-180,-135,0,0"/>
-            <TextBox x:Name="friestb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-955,0,0"/>
-            <TextBox x:Name="burgertb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-685,0,0"/>
-            <TextBox x:Name="nuggettb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-395,0,0"/>
-            <TextBox x:Name="pizzatb" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-135,0,0"/>
+            <CheckBox x:Name="pizzacb" Content="CheckBox" Width="15" Height="15" Margin="-180,-135,0,0"/>
+            <TextBox x:Name="friestb" IsEnabled="False" Text="0" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-955,0,0" Background="White" FontSize="20" FontWeight="Bold" />
+            <TextBox x:Name="burgertb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-685,0,0" Text="0" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="nuggettb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-395,0,0" Text="0" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="pizzatb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="180,-135,0,0" FontSize="20" Text="0" FontWeight="Bold"/>
             <Label Content="Food" Width="152" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-1200,0,0"/>
-            <Image x:Name="pizzacb" Height="723" Width="280" Source="/fire-4262753_1280.jpg" Stretch="Fill" Panel.ZIndex="-7" Opacity="0.3" Margin="0,-655,0,0"/>
+            <Image Height="723" Width="280" Source="/fire-4262753_1280.jpg" Stretch="Fill" Panel.ZIndex="-7" Opacity="0.3" Margin="0,-655,0,0"/>
+            <Button x:Name="frietplus" Content="+" Width="15" Height="30" Margin="261,-1091,0,0" Click="frietplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F"/>
+            <Button x:Name="burgerplus" Content="+" Width="15" Height="30" Click="burgerplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="261,-822,0,0"/>
+            <Button x:Name="nuggetplus" Content="+" Width="15" Height="30" Click="nuggetplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="261,-531,0,0"/>
+            <Button x:Name="pitzzaplus" Content="+" Width="15" Height="30" Click="pitzzaplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="261,-271,0,0"/>
+            <Button x:Name="frietmin" Content="-" Width="15" Height="30" Click="frietmin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" Margin="97,-1091,0,0" IsDefault="True"/>
+            <Button x:Name="burgermin" Content="-" Width="15" Height="30" Click="burgermin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="97,-822,0,0"/>
+            <Button x:Name="nuggetmin" Content="-" Width="15" Height="30" Click="nuggetmin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="97,-531,0,0"/>
+            <Button x:Name="pitzzamin" Content="-" Width="15" Height="30" Click="pitzzamin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="97,-271,0,0"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Width="280" Background="Black" Grid.ColumnSpan="2" Margin="672,0,0,0">
             <Image Height="135" Width="135" Margin="0,110,-15,-13" Source="/cola.png" Stretch="Fill"/>
@@ -39,24 +47,36 @@
             <TextBox TextWrapping="Wrap" Width="59" Height="30" Margin="185,-880,0,0"/>
             <Image Height="135" Width="135" Source="/7up.png" Stretch="Fill" Margin="0,0,-15,0"/>
             <Image Height="135" Width="135" Source="/smoothies.png" Stretch="Fill" Margin="0,0,-15,0"/>
-            <TextBox x:Name="colatb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-955,0,0"/>
-            <TextBox x:Name="fantatb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-685,0,0"/>
-            <TextBox x:Name="_7uptb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-395,0,0"/>
-            <TextBox x:Name="coctiltb" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-135,0,0"/>
-            <CheckBox Content="CheckBox" Width="15" Height="15" Margin="180,-955,0,0"/>
+            <TextBox x:Name="colatb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-955,0,0" Text="0" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="fantatb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-685,0,0" FontSize="20" Text="0" FontWeight="Bold"/>
+            <TextBox x:Name="_7uptb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-395,0,0" Text="0" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="coctiltb" IsEnabled="False" TextWrapping="Wrap" Width="60" Height="30" Margin="-180,-135,0,0" Text="0" FontSize="20" FontWeight="Bold"/>
+            <CheckBox x:Name="colacb" Content="CheckBox" Width="15" Height="15" Margin="180,-955,0,0"/>
             <CheckBox x:Name="fantacb" Content="CheckBox" Width="15" Height="15" Margin="180,-685,0,0"/>
             <CheckBox x:Name="_7upcb" Content="CheckBox" Width="15" Height="15" Margin="180,-395,0,0"/>
             <CheckBox x:Name="coctilcb" Content="CheckBox" Width="15" Height="15" Margin="180,-135,0,0"/>
             <Label Content="Soft Drink" Width="217" Height="70" Foreground="White" FontWeight="Bold" FontSize="48" FontFamily="Script MT Bold" Margin="0,-1200,0,0"/>
-            <Image x:Name="colacb" Height="723" Width="280" Source="/ice.jpg" Stretch="Fill" Margin="0,-655,0,0" Panel.ZIndex="-7" Opacity="0.4"/>
+            <Image Height="723" Width="280" Source="/ice.jpg" Stretch="Fill" Margin="0,-655,0,0" Panel.ZIndex="-7" Opacity="0.4"/>
+            <Button x:Name="colaplus" Content="+" Width="15" Height="30" Click="colaplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="-97,-1091,0,0"/>
+            <Button x:Name="fantaplus" Content="+" Width="15" Height="30" Click="fantaplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="-97,-822,0,0"/>
+            <Button x:Name="upplus" Content="+" Width="15" Height="30" Click="upplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="-97,-531,0,0"/>
+            <Button x:Name="coctilplus" Content="+" Width="15" Height="30" Click="coctilplus_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FF08246F" Margin="-97,-271,0,0"/>
+            <Button x:Name="colamin" Content="-" Width="15" Height="30" Click="colamin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="-261,-1091,0,0"/>
+            <Button x:Name="fantamin" Content="-" Width="15" Height="30" Click="fantamin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="-261,-822,0,0"/>
+            <Button x:Name="upmin" Content="-" Width="15" Height="30" Click="upmin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="-261,-531,0,0"/>
+            <Button x:Name="coctilmin" Content="-" Width="15" Height="30" Click="coctilmin_Click" FontSize="16" FontWeight="Bold" Foreground="White" Background="#FFC50D0D" IsDefault="True" Margin="-261,-271,0,0"/>
         </StackPanel>
         <StackPanel Margin="0,552,10,0" Background="Black" Grid.ColumnSpan="2" Panel.ZIndex="-10">
             <Button x:Name="add" Content="Add" Margin="-280,59,0,0" Width="80" Height="35" Background="#590BBBA8" Foreground="White" FontSize="22" FontWeight="Bold" Cursor="Hand" Click="add_Click"/>
             <Button x:Name="reset" Content="Reset" Width="80" Height="35" Margin="20,-35,0,0" Background="#59B41307" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="reset_Click"/>
-            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="290,-35,0,0" Background="#57CBF100" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="print_Click_1"/>
+            <Button x:Name="print" Content="Print" Width="80" Height="35" Margin="313,-35,0,0" Background="#57CBF100" FontSize="22" FontWeight="Bold" Foreground="White" Cursor="Hand" Click="print_Click_1"/>
             <Image Height="165" Width="423" Source="/bg.jpg" Stretch="Fill" Panel.ZIndex="-6" Opacity="0.5" Margin="0,-100,0,0"/>
+            <TextBox x:Name="totalitems" TextWrapping="Wrap" Width="70" Margin="-129,-237,0,0" Height="20"/>
+            <TextBox x:Name="totalitemstax" TextWrapping="Wrap" Width="70" Height="20" Margin="167,-236,0,0"/>
+            <Label Content="Total:" Margin="-270,-237,0,0" Width="47" Height="30" Foreground="#FFFDFDFD" FontSize="14" FontWeight="Bold"/>
+            <Label Content="Total/tax:" Width="74" Height="30" Foreground="#FFFDFDFD" FontSize="14" FontWeight="Bold" Margin="23,-237,0,0"/>
         </StackPanel>
-        <RichTextBox x:Name="bill" Margin="280,152,166,135" RenderTransformOrigin="0.493,0.473" Background="White"  FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,0">
+        <RichTextBox x:Name="bill" Margin="280,152,178,135" RenderTransformOrigin="0.493,0.473" Background="White"  FontSize="16" FontWeight="Bold" BorderThickness="0,0,0,0">
             <FlowDocument>
                 <Paragraph>
                     <Run />
